@@ -67,11 +67,14 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () async {
           showBarcodeScannerBottomSheet(context);
 
-          // Navigator.of(context).push(
-          //   MaterialPageRoute(
-          //     builder: (context) => const BarcodeScanner(),
-          //   ),
-          // );
+          // String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+          //     "#000000",
+          //     "cancel",
+          //     true,
+          //     ScanMode.BARCODE);
+          //
+          // print('res: ');
+          // print(barcodeScanRes);
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
