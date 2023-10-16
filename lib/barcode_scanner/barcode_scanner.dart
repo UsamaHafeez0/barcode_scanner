@@ -7,11 +7,6 @@ class BarcodeScanner extends StatefulWidget {
   const BarcodeScanner(
       {super.key});
 
-  // final MobileScannerController controller;
-  // final double scannerHeight;
-  // final double scannerWidth;
-  // final void Function(BarcodeCapture) onDetect;
-
   @override
   State<BarcodeScanner> createState() => _BarcodeScannerState();
 }
@@ -30,7 +25,6 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
   Future<void> onDetect(BarcodeCapture barcode) async {
     capture = barcode;
     setState(() => this.barcode = barcode.barcodes.first);
-    // Navigator.of(context).pop(barcode);
   }
 
   MobileScannerArguments? arguments;
